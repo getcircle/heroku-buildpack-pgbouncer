@@ -22,7 +22,7 @@ run-pgbouncer() {
   mkfifo "$psmgr"
 
   # Start processes.
-  aux-start pgbouncer SIGINT vendor/pgbouncer/bin/pgbouncer vendor/pgbouncer/pgbouncer.ini -u nobody
+  aux-start pgbouncer SIGINT vendor/pgbouncer/bin/pgbouncer -v -v -v -v vendor/pgbouncer/pgbouncer.ini -u nobody
   app-start SIGTERM "$@"
   pid=$!
 
