@@ -59,7 +59,7 @@ do
   fi
 
   cat >> /app/vendor/pgbouncer/pgbouncer.ini << EOFEOF
-$DBNAME= host=${DB_HOST} port=${DB_PORT} user=${DB_USER} dbname=${DB_NAME}
+$DB_NAME= host=${DB_HOST} port=${DB_PORT} user=${DB_USER} dbname=${DB_NAME}
 EOFEOF
 
   cat >> /app/vendor/pgbouncer/users.txt << EOFEOF
